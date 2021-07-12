@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<!-- Thymeleaf Namespace -->
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Greeting: CNC Program List</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css"
+          th:href="@{/css/style.css}"/>
+</head>
+<body>
+    <h1>Program List In Application Memory</h1>
+    <a href="addProgram">Add Program</a>
+    <br/><br/>
+    <div>
+        <table border="1">
+            <tr>
+                <th>Program ID</th>
+                <th>CNC ID</th>
+                <th>CNC Type</th>
+                <th>Maschine Dimensions</th>
+                <th>Author</th>
+            </tr>
+            <tr th:each ="program : ${programs}">
+                <td th:utext="${program.programId}">...</td>
+                <td th:utext="${program.cncId}">...</td>
+                <td th:utext="${program.cncType}">...</td>
+                <td th:utext="${program.cncDimensions}">...</td>
+                <td th:utext="${program.programAuthor}">...</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
