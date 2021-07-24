@@ -5,25 +5,40 @@ import com.shablovskiy91.models.CncProgramStorage;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.util.UUID;
+
 @SpringBootApplication
 public class CncStorageApplication {
     public static void main(String[] args) {
-        long programId = 1;
 
         CncProgramStorage.getCncProgramList().add(
-                new CncProgram(programId, 7, "PHILIPS", 2, "Михаил Староходов")
+                new CncProgram(
+                        UUID.randomUUID().toString(),
+                        7,
+                        "PHILIPS",
+                        2,
+                        "Михаил Староходов",
+                        "Корпус 200х400"
+                        )
         );
 
-        programId++;
         CncProgramStorage.getCncProgramList().add(
-                new CncProgram(programId, 9, "SIEMENS", 2, "Андрей Михайлов")
+                new CncProgram(UUID.randomUUID().toString(),
+                        9,
+                        "SIEMENS",
+                        2,
+                        "Андрей Михайлов",
+                        "Радиатор 50х50")
         );
 
-        programId++;
         CncProgramStorage.getCncProgramList().add(
-                new CncProgram(programId, 1, "BOSCH", 1, "Эдуард Грибоход")
+                new CncProgram(UUID.randomUUID().toString(),
+                        1,
+                        "BOSCH",
+                        1,
+                        "Эдуард Грибоход",
+                        "Панель управления 300х50")
         );
-
 
         SpringApplication.run(CncStorageApplication.class, args);
     }

@@ -9,16 +9,18 @@
 </head>
 <body>
     <h1>Program List In Application Memory</h1>
-    <a href="addProgram">Add Program</a>
-    <br/><br/>
+    <br/>
     <div>
         <table border="1">
             <tr>
                 <th>Program ID</th>
                 <th>CNC ID</th>
                 <th>CNC Type</th>
-                <th>Maschine Dimensions</th>
+                <th>Machine Dimensions</th>
                 <th>Author</th>
+                <th>Description</th>
+                <th></th>
+                <th></th>
             </tr>
             <tr th:each ="program : ${programs}">
                 <td th:utext="${program.programId}">...</td>
@@ -26,8 +28,14 @@
                 <td th:utext="${program.cncType}">...</td>
                 <td th:utext="${program.cncDimensions}">...</td>
                 <td th:utext="${program.programAuthor}">...</td>
+                <td th:utext="${program.programDescription}">...</td>
+                <td><a th:href="@{'/edit-form/' + ${program.programId} }">Edit</a></td>
+                <td><a th:href="@{'/delete/' + ${program.programId} }">Delete</a></td>
             </tr>
         </table>
+        <br/>
+        <a href="/add-form">Add Program</a>
+        <br/>
     </div>
 </body>
 </html>

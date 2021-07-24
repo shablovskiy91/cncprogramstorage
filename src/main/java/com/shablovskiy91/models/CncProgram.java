@@ -2,21 +2,23 @@ package com.shablovskiy91.models;
 
 public class CncProgram {
 
-    private final long programId;
+    private final String programId;
     private final int cncId;
     private final String cncType;
     private final int cncDimensions;
     private final String programAuthor;
+    private String programDescription;
 
-    public CncProgram(long programId, int cncId, String cncType, int cncDimensions, String programAuthor) {
+    public CncProgram(String programId, int cncId, String cncType, int cncDimensions, String programAuthor, String programDescription) {
         this.programId = programId;
         this.cncId = cncId;
         this.cncType = cncType;
         this.cncDimensions = cncDimensions;
         this.programAuthor = programAuthor;
+        this.programDescription = programDescription;
     }
 
-    public long getProgramId() {
+    public String getProgramId() {
         return programId;
     }
 
@@ -34,5 +36,13 @@ public class CncProgram {
 
     public String getProgramAuthor() {
         return programAuthor;
+    }
+
+    public String getProgramDescription() {
+        return programDescription;
+    }
+
+    public void setProgramDescription(String programDescription) {
+        this.programDescription = programDescription;
     }
 }

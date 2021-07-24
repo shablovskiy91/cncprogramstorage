@@ -10,9 +10,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class CncWebController {
 
-    @Value("${welcome.message}")
-    private String message;
-
     @GetMapping("/test")
     public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
         model.addAttribute("name", name);
@@ -20,19 +17,14 @@ public class CncWebController {
     }
 
     @GetMapping("/")
-    public String index(Model model) {
-        model.addAttribute("message", message);
-        return "index";
-    }
-
-    @GetMapping("/programs")
-    public String programList(Model model) {
+    public String programs(Model model) {
         model.addAttribute("programs", CncProgramStorage.getCncProgramList());
-        return "programs";
+        return "programs-list";
     }
 
-
-
-
+    @GetMapping("/add-form")
+    public String addForm() {
+        return "add-form";
+    }
 
 }
