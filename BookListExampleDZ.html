@@ -1,0 +1,60 @@
+<html>						
+	<head>					
+		<title> Book List - Homework </title>				
+		<style>				
+			h2 {color: blue;}			
+			p {color: green;}			
+		</style>				
+						
+	</head>					
+						
+	<body>					
+						
+		<h2> Список любимых книг </h2>				
+						
+		<!--Таблица, список книг-->				
+		<table border="2" >				
+		<caption> Всего в базе книг: 3 </caption>				
+						
+			<tr>			
+				<th> Название книги </th>		
+				<th> Автор </th>		
+				<th> Жанр </th>		
+			</tr>			
+						
+			<tr>			
+				<td> Идиотъ </td>		
+				<td> Ф.М. Достоевский </td>		
+				<td> роман </td>		
+			</tr>			
+						
+			<tr>			
+				<td> Граф Монте-Кристо </td>		
+				<td> Александр Дюма </td>		
+				<td> исторический роман, приключенческий роман </td>		
+			</tr>			
+						
+			<tr>			
+				<td> Гарри Поттер </td>		
+				<td> Дж.К. Роулинг </td>		
+				<td> роман, фэнтези </td>		
+			</tr>			
+		</table>				
+		<br>				
+						
+		<p>				
+			Добавить книгу:			
+		</p>				
+		<!--Форма для добавления книги-->				
+		<form action="/senddata" >				
+			<label> Название </label>			
+			<input name="name" type="text" />			
+			<label> Автор </label>			
+			<input name="author" type="text" />			
+			<label> Жанр </label>			
+			<input name="genre" type="text" />			
+			<input type="submit" value="Добавить!" />			
+		</form>				
+		<br>				
+	</body>					
+</html>						
