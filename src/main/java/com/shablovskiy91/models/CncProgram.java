@@ -1,5 +1,7 @@
 package com.shablovskiy91.models;
 
+import java.util.UUID;
+
 public class CncProgram {
 
     private final String programId;
@@ -9,8 +11,8 @@ public class CncProgram {
     private final String programAuthor;
     private String programDescription;
 
-    public CncProgram(String programId, int cncId, String cncType, int cncDimensions, String programAuthor, String programDescription) {
-        this.programId = programId;
+    public CncProgram(int cncId, String cncType, int cncDimensions, String programAuthor, String programDescription) {
+        this.programId = UUID.randomUUID().toString();
         this.cncId = cncId;
         this.cncType = cncType;
         this.cncDimensions = cncDimensions;

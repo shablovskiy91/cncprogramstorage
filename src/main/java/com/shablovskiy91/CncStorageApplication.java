@@ -13,7 +13,6 @@ public class CncStorageApplication {
 
         CncProgramStorage.getCncProgramList().add(
                 new CncProgram(
-                        UUID.randomUUID().toString(),
                         7,
                         "PHILIPS",
                         2,
@@ -23,7 +22,7 @@ public class CncStorageApplication {
         );
 
         CncProgramStorage.getCncProgramList().add(
-                new CncProgram(UUID.randomUUID().toString(),
+                new CncProgram(
                         9,
                         "SIEMENS",
                         2,
@@ -32,7 +31,7 @@ public class CncStorageApplication {
         );
 
         CncProgramStorage.getCncProgramList().add(
-                new CncProgram(UUID.randomUUID().toString(),
+                new CncProgram(
                         1,
                         "BOSCH",
                         1,
