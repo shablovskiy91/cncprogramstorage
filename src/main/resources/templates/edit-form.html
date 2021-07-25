@@ -1,3 +1,20 @@
-<html>
+<!DOCTYPE HTML>
+<!-- Thymeleaf Namespace -->
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Edit Program</title>
+        <meta http-equiv="=Content-Type" content="text/html; charset=UTF-8"/>
+    </head>
+    <body>
+        <form method="post" action="/update">
+            <input type="text" placeholder="Program ID" name="programId" th:value="${cncProgram.programId}">
+            <input type="text" placeholder="CNC ID" name="cncId" th:value="${cncProgram.cncId}"/>
+            <input type="text" placeholder="CNC Type" name="cncType"th:value="${cncProgram.cncType}"/>
+            <input type="text" placeholder="Machine Dimensions" name="cncDimensions" th:value="${cncProgram.cncDimensions}"/>
+            <input type="text" placeholder="Author" name="programAuthor" th:value="${cncProgram.programAuthor}"/>
+            <input type="text" placeholder="Description" name="programDescription" th:value="${cncProgram.programDescription}"/>
+            <input type="submit"/>
+        </form>
+    </body>
 
 </html>

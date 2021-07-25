@@ -4,7 +4,7 @@ import java.util.UUID;
 
 public class CncProgram {
 
-    private final String programId;
+    private String programId;
     private final int cncId;
     private final String cncType;
     private final int cncDimensions;
@@ -18,6 +18,11 @@ public class CncProgram {
         this.cncDimensions = cncDimensions;
         this.programAuthor = programAuthor;
         this.programDescription = programDescription;
+    }
+
+
+    public void setProgramId(String programId) {
+        this.programId = programId;
     }
 
     public String getProgramId() {
@@ -47,4 +52,5 @@ public class CncProgram {
     public void setProgramDescription(String programDescription) {
         this.programDescription = programDescription;
     }
+
 }
