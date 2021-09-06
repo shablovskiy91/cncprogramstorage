@@ -54,7 +54,7 @@ public class CncProgram {
     public String toString() {
         return "CncProgram{" +
                 "programId='" + programId + '\'' +
-                ", cncId=" + machineId +
+                ", machineId=" + machineId +
                 ", cncType='" + cncType + '\'' +
                 ", machineDimensions=" + machineDimensions +
                 ", programAuthor='" + programAuthor + '\'' +

@@ -14,7 +14,7 @@
         <table border="1">
             <tr>
                 <th>Program ID</th>
-                <th>CNC ID</th>
+                <th>Machine ID</th>
                 <th>CNC Type</th>
                 <th>Machine Dimensions</th>
                 <th>Author</th>
@@ -24,9 +24,9 @@
             </tr>
             <tr th:each ="program : ${programs}">
                 <td th:utext="${program.programId}">...</td>
-                <td th:utext="${program.cncId}">...</td>
+                <td th:utext="${program.machineId}">...</td>
                 <td th:utext="${program.cncType}">...</td>
-                <td th:utext="${program.cncDimensions}">...</td>
+                <td th:utext="${program.machineDimensions}">...</td>
                 <td th:utext="${program.programAuthor}">...</td>
                 <td th:utext="${program.programDescription}">...</td>
                 <td><a th:href="@{'/edit-form/' + ${program.programId} }">Edit</a></td>

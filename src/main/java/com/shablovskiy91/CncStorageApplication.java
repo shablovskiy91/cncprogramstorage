@@ -1,7 +1,6 @@
 package com.shablovskiy91;
 
 import com.shablovskiy91.models.CncProgram;
-import com.shablovskiy91.models.CncProgramStorage;
 import org.h2.jdbcx.JdbcDataSource;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
@@ -15,7 +14,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
-import java.util.UUID;
 
 @SpringBootApplication
 public class CncStorageApplication {
@@ -36,8 +34,10 @@ public class CncStorageApplication {
                 try (
                         Connection connection = dataSource.getConnection();
                         Statement statement = connection.createStatement()
-                ) {
+                )
+                {
                     statement.executeUpdate(sql);
+
 
                     String insertSql = "INSERT INTO cncprogram (machine_id, cnc_type, machine_dimensions, program_author, program_description) VALUES (?, ?, ?, ?, ?)";
                     try (PreparedStatement preparedStatement = connection.prepareStatement(insertSql)) {
