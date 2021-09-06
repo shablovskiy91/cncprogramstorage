@@ -1,21 +1,18 @@
 package com.shablovskiy91.models;
 
-import java.util.UUID;
-
 public class CncProgram {
 
     private String programId;
-    private final int cncId;
+    private final int machineId;
     private final String cncType;
-    private final int cncDimensions;
+    private final int machineDimensions;
     private final String programAuthor;
     private String programDescription;
 
-    public CncProgram(int cncId, String cncType, int cncDimensions, String programAuthor, String programDescription) {
-        this.programId = UUID.randomUUID().toString();
-        this.cncId = cncId;
+    public CncProgram(int machineId, String cncType, int machineDimensions, String programAuthor, String programDescription) {
+        this.machineId = machineId;
         this.cncType = cncType;
-        this.cncDimensions = cncDimensions;
+        this.machineDimensions = machineDimensions;
         this.programAuthor = programAuthor;
         this.programDescription = programDescription;
     }
@@ -29,16 +26,16 @@ public class CncProgram {
         return programId;
     }
 
-    public int getCncId() {
-        return cncId;
+    public int getMachineId() {
+        return machineId;
     }
 
     public String getCncType() {
         return cncType;
     }
 
-    public int getCncDimensions() {
-        return cncDimensions;
+    public int getMachineDimensions() {
+        return machineDimensions;
     }
 
     public String getProgramAuthor() {
@@ -53,4 +50,15 @@ public class CncProgram {
         this.programDescription = programDescription;
     }
 
+    @Override
+    public String toString() {
+        return "CncProgram{" +
+                "programId='" + programId + '\'' +
+                ", cncId=" + machineId +
+                ", cncType='" + cncType + '\'' +
+                ", machineDimensions=" + machineDimensions +
+                ", programAuthor='" + programAuthor + '\'' +
+                ", programDescription='" + programDescription + '\'' +
+                '}';
+    }
 }

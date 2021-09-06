@@ -1,2 +1,4 @@
-/cncprogramstorage.iml
-/.idea/
+*.iml
+.idea/
+target/
+*.db
